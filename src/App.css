@@ -189,89 +189,104 @@ html, body, #root {
 }
 
 
-/* Experience Section Styles */
-.experience-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* General Experience Section Styles */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
-.experience-item {
-  margin-bottom: 20px;
-  padding: 15px;
+.experience-card {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #f9f9f9;
-  transition: box-shadow 0.3s ease;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.experience-item:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.experience-card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .experience-header {
+  cursor: pointer;
+}
+
+.experience-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
+}
+
+.experience-title h3 {
+  font-size: 20px;
   color: #4CAF50;
+  margin: 0;
 }
 
 .experience-duration {
   font-size: 14px;
   color: #666;
-  margin: 5px 0;
+  margin-top: 5px;
+}
+
+.experience-summary {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
 }
 
 .dropdown-icon {
   font-size: 16px;
-  margin-left: 10px;
+  color: #4CAF50;
 }
 
 .experience-details {
   margin-top: 15px;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
 }
 
-.experience-details h4 {
-  font-size: 16px;
+.experience-details-content h4 {
+  font-size: 18px;
   color: #4CAF50;
   margin-bottom: 10px;
 }
 
 .experience-details-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.experience-details-list li {
-  margin-bottom: 15px;
+.experience-item {
   display: flex;
   align-items: flex-start;
-  font-size: 14px;
+  gap: 10px;
 }
 
-.experience-details-list .bullet-icon {
-  margin-right: 10px;
-  font-size: 18px;
+.bullet-icon {
+  font-size: 20px;
   color: #4CAF50;
 }
 
-.experience-details a {
+.experience-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.experience-item a {
   color: #4CAF50;
   text-decoration: none;
 }
 
-.experience-details a:hover {
+.experience-item a:hover {
   text-decoration: underline;
 }
-
 
 /* Contest Achievements Section */
 .achievements-list-line {
@@ -375,3 +390,72 @@ html, body, #root {
   font-weight: bold;
 }
 
+.research-section {
+  padding: 20px;
+}
+
+.research-section h2 {
+  color: #4caf50;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.research-highlights {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 16px;
+}
+
+.research-highlights li {
+  margin-bottom: 10px;
+}
+
+.research-links {
+  margin-top: 20px;
+}
+
+.research-links h3 {
+  font-size: 20px;
+  color: #4caf50;
+}
+
+.research-links ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.research-links ul li {
+  margin-bottom: 10px;
+}
+
+.research-links a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.research-links a:hover {
+  text-decoration: underline;
+}
+
+.tab-navigation button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.tab-navigation button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 20px;
+}

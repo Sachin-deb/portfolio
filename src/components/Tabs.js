@@ -4,6 +4,7 @@ import Projects from './Projects';
 import Experience from './Experience';
 import ContestAchievements from './ContestAchievements';
 import Contact from './Contact';
+import Research from './Research';
 
 function Tabs() {
   const [activeTab, setActiveTab] = useState('About');
@@ -20,6 +21,8 @@ function Tabs() {
         return <ContestAchievements />;
       case 'Contact':
         return <Contact />;
+      case 'Research':
+        return <Research />;
       default:
         return <About />;
     }
@@ -30,6 +33,9 @@ function Tabs() {
       <nav className="tabs">
         <button className={activeTab === 'About' ? 'active' : ''} onClick={() => setActiveTab('About')}>
           About
+        </button>
+        <button className={activeTab === 'Research' ? 'active' : ''} onClick={() => setActiveTab('Research')}>
+          Research
         </button>
         <button className={activeTab === 'Projects' ? 'active' : ''} onClick={() => setActiveTab('Projects')}>
           Projects

@@ -7,8 +7,16 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   justify-content: space-between;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 
 .header {
   background-color: #4CAF50;
@@ -47,6 +55,8 @@ html, body, #root {
 
 .tabs {
   display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: center;
   background-color: #eee;
   padding: 10px;

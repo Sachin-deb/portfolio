@@ -56,10 +56,9 @@ html, body, #root {
 .tabs {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  max-width: 100%;
   justify-content: center;
   background-color: #eee;
-  padding: 10px;
 }
 
 .tabs button {
